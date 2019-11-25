@@ -1,0 +1,71 @@
+[name] New design 1
+[puzzle] Sz026
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.....14...........8...
+.....14.15C......16...
+...141541CB54..9414...
+........16A1C..A.1C...
+......15556.34.34.2...
+......................
+......................
+......................
+
+[chip] 
+[type] UC4X
+[x] 13
+[y] 2
+[code] 
+  mov x0 x3
+  slp 1
+
+[chip] 
+[type] DIAL6
+[x] 7
+[y] 4
+[is-puzzle-provided] true
+
+[chip] 
+[type] BANK
+[x] 12
+[y] 4
+[rom] 
+100,10,1,0,0,0,0,0,0,0,0,0,0,0
+
+[chip] 
+[type] DX3
+[x] 16
+[y] 4
+
+[chip] 
+[type] UC6
+[x] 6
+[y] 5
+[code] 
+  mov 0 x3
+  slp 1
+  mov 1 x3
+  slp 1
+  mov 2 x3
+  slp 1
+  mov 4 x3
+  slp 1
+
+[chip] 
+[type] DIAL5
+[x] 4
+[y] 6
+[is-puzzle-provided] true
+
+[chip] 
+[type] DIAL4
+[x] 4
+[y] 7
+[is-puzzle-provided] true
+

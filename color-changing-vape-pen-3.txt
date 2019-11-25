@@ -1,0 +1,83 @@
+[name] New design 3
+[puzzle] Sz010
+[production-cost] 1500
+[power-usage] 1085
+[lines-of-code] 19
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+..15C.................
+..94A154..95C1C.......
+..A.A1C...2.3434......
+..A.A.34.1555554......
+..A.B554.14...94......
+..A.3415C...956.......
+..3554..35556.........
+......................
+......................
+
+[chip] 
+[type] RAM
+[x] 2
+[y] 2
+
+[chip] 
+[type] UC6
+[x] 7
+[y] 3
+[code] 
+  mov x0 null
+  mov x1 x3
+  mov x1 p1
+  mov x1 p0
+  slp 1
+
+[chip] 
+[type] BRIDGE
+[x] 10
+[y] 4
+
+[chip] 
+[type] LEDRGBV
+[x] 15
+[y] 4
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC6
+[x] 3
+[y] 6
+[code] 
+  mov 0 x1
+  mov x3 dat
+  tgt dat -999
+- tlt acc 1
++ mov dat x0
++ mov x3 x0
++ mov x3 x0
++ mov x3 acc
+  mov 0 x1
+# tgt acc 0
+  mov null x2
+  sub 1
+  slp 1
+
+[chip] 
+[type] UC4
+[x] 11
+[y] 6
+[code] 
+  mov x0 p1
+  slp 1
+
+[chip] 
+[type] RADIO
+[x] 7
+[y] 7
+[rotated] true
+[is-puzzle-provided] true
+

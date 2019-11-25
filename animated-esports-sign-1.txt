@@ -1,0 +1,76 @@
+[name] New design 2
+[puzzle] Sz001
+[production-cost] 1400
+[power-usage] 144
+[lines-of-code] 4
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......141C............
+........96955D4.......
+........A96..2........
+........AA94154.......
+........AAA..14.......
+.....941EA35D541C.....
+.....34.235421556.....
+......................
+......................
+
+[chip] 
+[type] NOT
+[x] 6
+[y] 3
+[rotated] true
+
+[chip] 
+[type] OR
+[x] 14
+[y] 3
+
+[chip] 
+[type] BRIDGE
+[x] 13
+[y] 4
+
+[chip] 
+[type] NOT
+[x] 6
+[y] 5
+
+[chip] 
+[type] NOT
+[x] 11
+[y] 5
+[rotated] true
+
+[chip] 
+[type] UC4
+[x] 14
+[y] 5
+[code] 
+  gen p0 6 1
+  gen p0 2 1
+
+[chip] 
+[type] UC4
+[x] 4
+[y] 7
+[code] 
+  gen p1 1 1
+
+[chip] 
+[type] UC4
+[x] 14
+[y] 7
+[code] 
+  gen p0 6 4
+
+[chip] 
+[type] NOT
+[x] 7
+[y] 8
+

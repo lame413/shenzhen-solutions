@@ -1,0 +1,86 @@
+[name] New design 1
+[puzzle] Sz022
+[production-cost] 1600
+[power-usage] 161
+[lines-of-code] 35
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+........95555555555C..
+.....954A155555555C2..
+.....A..A.95554.1C3C..
+..954A15696......A.2..
+..A1561556..1C...294..
+..2...15554..3555568..
+.................156..
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 10
+[y] 2
+[code] 
+e: slx x1
+  tcp x1 2
+- gen p1 1 5
+- gen p1 1 0
+- jmp e
++ gen p1 7 0
++ jmp e
+  slp 1
+  gen p1 2 1
+  gen p1 2 0
+
+[chip] 
+[type] BRIDGE
+[x] 17
+[y] 2
+
+[chip] 
+[type] UC6
+[x] 4
+[y] 3
+[code] 
+  slx x0
+  tcp x0 2
+- mov 1 x1
+- mov 1 x2
+- mov 1 x3
+- jmp s
++ mov 3 x2
++ mov 3 x3
++ jmp s
+  mov 2 x2
+  mov 2 x3  
+s: gen p1 7 0
+
+[chip] 
+[type] UC4
+[x] 14
+[y] 5
+[code] 
+  slx x0
+  tcp x0 2
+- gen p1 1 1
+- gen p1 1 1
+- gen p1 1 1
+- gen p1 1 1
++ gen p1 7 0
+
+[chip] 
+[type] UC4
+[x] 7
+[y] 6
+[code] 
+  slx x0
+  mov x0 null
+  gen p1 1 1
+  gen p1 1 1
+  gen p1 1 1
+  gen p1 1 1
+

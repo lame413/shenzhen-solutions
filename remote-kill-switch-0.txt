@@ -1,0 +1,55 @@
+[name] New design 1
+[puzzle] Sz016
+[production-cost] 800
+[power-usage] 438
+[lines-of-code] 11
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......1554............
+........15C15C..94....
+..........A1C3416.....
+..........A16..154....
+..........354..1C.....
+................34....
+......................
+......................
+......................
+
+[chip] 
+[type] RAM
+[x] 9
+[y] 4
+
+[chip] 
+[type] DX3
+[x] 14
+[y] 4
+
+[chip] 
+[type] UC6
+[x] 9
+[y] 6
+[code] 
+  mov x0 dat
+  tcp dat -1
++ dst x0 dat
++ mov 0 x1
+- mov 0 x2
+  teq dat -1
++ mov 0 x1
+  tgt x1 4
++ mov 0 acc
+  mov acc x3
+  slp 1
+
+[chip] 
+[type] RADIO
+[x] 4
+[y] 7
+[is-puzzle-provided] true
+

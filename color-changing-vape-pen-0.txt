@@ -1,0 +1,100 @@
+[name] New design 1
+[puzzle] Sz010
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+....154...............
+.....15C1554.1C.......
+...9554A9414..34......
+...A.94A3554.154......
+..16.A.A9554..94......
+.....A16A155556.......
+.....3556.............
+......................
+......................
+
+[chip] 
+[type] UC4
+[x] 7
+[y] 2
+[code] 
+  mov x0 acc
+  teq acc -999
+- mov acc p1
+  mov x0 acc
+  teq acc -999
+- mov acc p1
+  slp 1
+
+[chip] 
+[type] UC4
+[x] 3
+[y] 4
+[code] 
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  mov p1 p0
+  slp 1
+
+[chip] 
+[type] BRIDGE
+[x] 10
+[y] 4
+
+[chip] 
+[type] UC4
+[x] 11
+[y] 4
+[code] 
+  mov x0 acc
+  teq acc -999
+- mov acc p1
+  slp 1
+
+[chip] 
+[type] LEDRGBV
+[x] 15
+[y] 4
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC6
+[x] 6
+[y] 6
+[code] 
+  slx x0
+  mov x0 x3
+  mov x0 x2
+  mov x0 x1
+  mov x0 acc
+  teq acc 0
++ mov 0 x3
+- mov x3 x3
+  sub 1
+  slp 1
+
+[chip] 
+[type] UC4
+[x] 11
+[y] 6
+[code] 
+  mov x0 acc
+  teq acc -999
+- mov acc p1
+  slp 1
+
+[chip] 
+[type] RADIO
+[x] 2
+[y] 7
+[is-puzzle-provided] true
+

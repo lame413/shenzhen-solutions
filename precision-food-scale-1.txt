@@ -1,0 +1,60 @@
+[name] New design 2
+[puzzle] Sz012
+[production-cost] 800
+[power-usage] 579
+[lines-of-code] 16
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+..1C..954.............
+...A..A...............
+...354A15554..94......
+......A...94.16.......
+..155575556...........
+......................
+......................
+......................
+
+[chip] 
+[type] LCDN
+[x] 15
+[y] 2
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC4
+[x] 11
+[y] 4
+[code] 
+@ mov -1 acc
+  teq p0 100
++ teq x0 0
++ mul -1
+  teq acc -1
++ mov -999 x1
++ mov x0 null
+- mov x0 x1
+  slp 1
+
+[chip] 
+[type] UC6
+[x] 5
+[y] 5
+[code] 
+#tare
+  teq p1 100
++ mov p0 dat
+  
++ mov acc x2
+  mov p0 acc
+  sub dat
+  
+  
+  mov acc x2
+  slp 1
+

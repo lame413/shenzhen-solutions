@@ -1,0 +1,105 @@
+[name] New design 1
+[puzzle] Sz024
+[production-cost] 1700
+[power-usage] 265
+[lines-of-code] 41
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+.....15C...154954.....
+.....94A14.94.A14.....
+.....A.A15C3496.......
+.....A.34.A1D6148.....
+.....A....34A1556.....
+.....35555D4A..14.....
+..........356.........
+......................
+......................
+
+[chip] 
+[type] UC4X
+[x] 11
+[y] 3
+[code] 
+  slx x0
+  mov x0 x3
+  mov x1 acc
+  mov acc x3
+l:  tgt acc 0
++ mov x1 x3
++ sub 1
++ jmp l
+  
+
+[chip] 
+[type] BRIDGE
+[x] 15
+[y] 3
+
+[chip] 
+[type] ID
+[x] 6
+[y] 5
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC4X
+[x] 12
+[y] 5
+[code] 
+  slx x0
+  mov x0 x2
+  mov x1 acc
+  mov acc x2
+l:  tgt acc 0
++ mov x1 x2
++ sub 1
++ jmp l
+
+[chip] 
+[type] UC6
+[x] 6
+[y] 6
+[code] 
+  slx x1
+  mov x1 acc
+  tcp acc x0
+- jmp lt
++ jmp gt
+  jmp e
+lt: mul -1
+gt: mov acc x3
+  jmp s
+e: mov acc x2
+s: slp 1
+
+[chip] 
+[type] UC4X
+[x] 9
+[y] 7
+[code] 
+  slx x1
+  mov x1 acc
+  tgt acc 0
++ mov acc x3
+- mul -1
+- mov acc x2
+
+[chip] 
+[type] UC4X
+[x] 13
+[y] 7
+[code] 
+  slx x0
+  mov x0 x2
+  mov x3 acc
+  mov acc x2
+l:  tgt acc 0
++ mov x3 x2
++ sub 1
++ jmp l
+
